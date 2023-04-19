@@ -27,7 +27,7 @@ let res3 = Boolean(x + y);
 console.log(res3); // true
 console.log(typeof res3); // ""boolean""
 
-let res4 = x - "y";
+let res4 = Math.sqrt(x - y);
 console.log(res4); // NaN
 console.log(typeof res4); // ""number""
 
@@ -39,9 +39,31 @@ if (isAdult > 18) {
 } else {
   alert("Ви ще надто молоді");
 }
-//4
+//4  Читав про метод reduce на одному з сайтів і натрапив на вирішення схожого прикладу)
+// 
+let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5]
+let data;
+let obj = arr.reduce((key, num) => {
+  if(!key[num]){
+  key[num] = 1;
+  return key;
+  }else {
+    key[num] += 1;
+  return key;
+}
+},{});
 
-//5
+let maxValue = 0;
+for(let index in obj){
+  if(obj[index] > maxValue) {
+    maxValue = obj[index];
+    data = +index;
+  }
+  }
+arr = arr.filter(number => number !== (data));
+
+console.log(arr);
+
 
 
 let firstSideLength = +prompt();
@@ -102,10 +124,4 @@ switch(hours){
     break;   
 } 
 
-//*** 
-let income = document.querySelector('.income');
-let beingLate = document.querySelector('.being-late');
-let codeStrings = document.querySelector('.code-string');
-let vasiaCodestrings;
-let vasiaLates;
-let delayPenalty; 
+
