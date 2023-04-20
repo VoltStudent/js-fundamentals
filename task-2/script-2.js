@@ -1,8 +1,8 @@
 //1
 
-let a = +prompt();
-let b = +prompt();
-let c = +prompt();
+let a = +prompt("Enter number");
+let b = +prompt("Enter number");
+let c = +prompt("Enter number");
 
 if (a < b < c) {
   alert("True");
@@ -33,7 +33,7 @@ console.log(typeof res4); // ""number""
 
 //3
 
-let isAdult = prompt();
+let isAdult = prompt("Введіть свій вік");
 if (isAdult > 18) {
   alert("Ви досягли повнолітнього віку");
 } else {
@@ -65,9 +65,9 @@ console.log(arr);
 
 
 
-let firstSideLength = +prompt();
-let secondSideLength = +prompt();
-let thirdSideLength = +prompt();
+let firstSideLength = +prompt("Enter the size of the side of the triangle");
+let secondSideLength = +prompt("Enter the size of the side of the triangle");
+let thirdSideLength = +prompt("Enter the size of the side of the triangle");
 if (isNaN(firstSideLength || secondSideLength || thirdSideLength)) {
   console.log("Incorrect data");
 } else {
