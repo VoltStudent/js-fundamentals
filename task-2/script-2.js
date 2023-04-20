@@ -59,7 +59,7 @@ for(let index in obj){
     data = +index;
   }
   }
-arr = arr.filter(number => number !== (data));
+arr = arr.filter(index => index !== (data));
 
 console.log(arr);
 
