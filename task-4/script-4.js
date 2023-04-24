@@ -1,5 +1,5 @@
 //1
-const btn1 = document.querySelector(".btn1");
+const btn9 = document.querySelector(".btn9");
 const first = document.querySelector(".first");
 const second = document.querySelector(".second");
 function sumSliceArray(arr, first, second) {
@@ -24,7 +24,7 @@ function sumSliceArray(arr, first, second) {
     let sum = arr[first] + arr[second];
     return sum;
 }
-btn1.addEventListener('click', () => {
+btn9.addEventListener('click', () => {
     const firstInput = first.value;
     const secondInput = second.value;
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -39,7 +39,7 @@ btn1.addEventListener('click', () => {
 });
 
 //2
-const btn2 = document.querySelector(".btn2");
+const btn10 = document.querySelector(".btn10");
 function checkAge(name, age, status) {
     try {
         name = document.querySelector(".user-name").value;
@@ -76,11 +76,11 @@ function checkAge(name, age, status) {
 
 }
 
-btn2.onclick = checkAge;
+btn10.onclick = checkAge;
 
 
 //3
-const btn3 = document.querySelector(".btn3");
+const btn11 = document.querySelector(".btn11");
 function calcRectangleArea(width, height) {
     width = document.querySelector(".width");
     height = document.querySelector(".height");
