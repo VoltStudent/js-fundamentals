@@ -26,7 +26,7 @@ console.log(string);
 let arr2 = [];
 function randArray(k) {
     for (let i = 0; i <= k; ++i) {
-        arr2.push(Math.ceil(Math.random() * 500));
+        arr2.push(Math.round(Math.random() * 500));
     }
 }
 randArray(5);
@@ -123,3 +123,15 @@ console.log(resultTask7_1);
 console.log(resultTask7_2);
 
 //Ускладнена задача
+function create(str) {
+    return function(newStr) {
+        if(newStr === str){
+            return true;
+        } 
+        return false;
+    }
+}
+
+const tom = create("pass_for_Tom");
+tom("pass_for_Tom"); //повертає true 
+tom("pass_for_tom"); //повертає false
