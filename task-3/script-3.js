@@ -162,7 +162,7 @@ function create(str) {
 }
 
 btn8.addEventListener('click', () => {
-console.log(tom("pass_for_Tom"));
-console.log(tom("pass_for_tom"));
+    console.log(tom("pass_for_Tom"));
+    console.log(tom("pass_for_tom"));
 });
 
