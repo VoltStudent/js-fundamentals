@@ -1,38 +1,51 @@
 //1
-let arr = [];
+const btn1 = document.querySelector(".btn1");
 function createArray(start, end) {
+    let arr = [];
     for (let i = start; i <= end; ++i) {
         arr.push(i);
     }
     return arr;
 }
-createArray(2, 9);
-console.log(arr);
+btn1.addEventListener('click', () => {
+    start = +document.querySelector(".start").value;
+    end = +document.querySelector(".end").value;
+    console.log(createArray(start, end));
+});
 
 //2
-let string = "";
+const btn2 = document.querySelector(".btn2");
 function numbers(a, b) {
+    let string = "";
     for (let i = a; i <= b; ++i) {
         for (let j = 0; j < i - a + 1; ++j) {
             string += i + ",";
         }
     }
+    return string;
 }
-
-numbers(1, 3);
-console.log(string);
+btn2.addEventListener('click', () => {
+    a = +document.querySelector(".a").value;
+    b = +document.querySelector(".b").value;
+    console.log(numbers(a, b));
+});
 
 //3
-let arr2 = [];
+const btn3 = document.querySelector(".btn3");
 function randArray(k) {
+    let arr2 = [];
     for (let i = 0; i <= k; ++i) {
         arr2.push(Math.round(Math.random() * 500));
     }
+    return arr2;
 }
-randArray(5);
-console.log(arr2);
+btn3.addEventListener('click', () => {
+    k = +document.querySelector(".k").value;
+    console.log(randArray(k));
+});
 
 //4
+const btn4 = document.querySelector(".btn4");
 const arr3 = [5, 3, 4, 5, 6, 7, 3];
 const arr4 = compact(arr3);
 function compact(arr3) {
@@ -44,9 +57,12 @@ function compact(arr3) {
     }
     return arr5;
 }
-console.log(arr4); // [5,3,4,6,7]
+btn4.addEventListener('click', () => {
+    console.log(arr4);
+});
 
 //5
+const btn5 = document.querySelector(".btn5");
 let arr6 = [5, 'Limit', 12, 'a', '3', 99, 2, [2, 4, 3, '33', 'a', 'text'], 'strong', 'broun'];
 let arrNew = oneTypeArr(arr6);
 function oneTypeArr(arr6) {
@@ -76,9 +92,12 @@ function oneTypeArr(arr6) {
     return resultArr;
 }
 
-console.log(arrNew);
+btn5.addEventListener('click', () => {
+    console.log(arrNew);
+});
 
 //6
+const btn6 = document.querySelector(".btn6");
 function calc(a, b, op) {
     if (typeof a === "number" && typeof b === "number" && typeof op === "number") {
         switch (op) {
@@ -94,11 +113,17 @@ function calc(a, b, op) {
     }
 }
 
-console.log(calc(3, 7, 2));
+btn6.addEventListener('click', () => {
+    a = +document.querySelector(".a-value").value;
+    b = +document.querySelector(".b-value").value;
+    op = +document.querySelector(".op").value;
+    console.log(calc(a, b, op));
+});
 
 //7
-let resultTask7_1 = findUnique([1, 2, 3, 4, 5, 6, 7, 8]);
-let resultTask7_2 = findUnique([1, 2, 2, 3, 4, 5, 6, 7, 8]);
+const btn7 = document.querySelector(".btn7")
+const resultTask7_1 = findUnique([1, 2, 3, 4, 5, 6, 7, 8]);
+const resultTask7_2 = findUnique([1, 2, 2, 3, 4, 5, 6, 7, 8]);
 function findUnique(arr9) {
 
     let obj = arr9.reduce((key, num) => {
@@ -119,19 +144,25 @@ function findUnique(arr9) {
     return true
 }
 
-console.log(resultTask7_1);
-console.log(resultTask7_2);
+btn7.addEventListener('click', () => {
+    console.log(resultTask7_1);
+    console.log(resultTask7_2);
+});
 
 //Ускладнена задача
+const btn8 = document.querySelector(".btn8")
+const tom = create("pass_for_Tom");
 function create(str) {
-    return function(newStr) {
-        if(newStr === str){
+    return function (newStr) {
+        if (newStr === str) {
             return true;
-        } 
+        }
         return false;
     }
 }
 
-const tom = create("pass_for_Tom");
-tom("pass_for_Tom"); //повертає true 
-tom("pass_for_tom"); //повертає false
+btn8.addEventListener('click', () => {
+console.log(tom("pass_for_Tom"));
+console.log(tom("pass_for_tom"));
+});
+
