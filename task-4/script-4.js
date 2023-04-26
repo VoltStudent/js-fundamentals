@@ -1,6 +1,5 @@
 //1
 const btn9 = document.querySelector(".btn9");
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function sumSliceArray(arr, first, second) {
     for (let item of arr) {
         if (isNaN(item)) {
@@ -10,21 +9,22 @@ function sumSliceArray(arr, first, second) {
     if (isNaN(first) || isNaN(second)) {
         throw new TypeError(":Second and third arguments are not a numbers!");
     }
-
+    
     else if (!Array.isArray(arr)) {
         throw new TypeError(":First argument is not an array!");
     }
     else if (first >= arr.length || second >= arr.length || first < 0 || second < 0) {
         throw new RangeError(":Value of second and third arguments are out of range");
     }
-
+    
     return arr[first] + arr[second];
 }
 btn9.addEventListener('click', () => {
-    const first = +document.querySelector(".first").value;
-    const second = +document.querySelector(".second").value;
-
+    
     try {
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const first = +document.querySelector(".first").value;
+        const second = +document.querySelector(".second").value;
         const result = sumSliceArray(arr, first, second);
         console.log(result);
     }
@@ -65,11 +65,11 @@ function checkAge(name, age, status) {
 }
 
 btn10.addEventListener('click', () => {
-    const name = document.querySelector(".user-name").value;
-    const age = +document.querySelector(".user-age").value;
-    const status = document.querySelector(".user-status").value;
-
+    
     try {
+        const name = document.querySelector(".user-name").value;
+        const age = +document.querySelector(".user-age").value;
+        const status = document.querySelector(".user-status").value;
         const result = checkAge(name, age, status);
     }
     catch (error) {
@@ -91,10 +91,10 @@ function calcRectangleArea(width, height) {
     return width * height;
 }
 btn11.addEventListener('click', () => {
-    const width = +document.querySelector(".width").value;
-    const height = document.querySelector(".height").value;
-
+    
     try {
+        const width = +document.querySelector(".width").value;
+        const height = document.querySelector(".height").value;
         const result = calcRectangleArea(width, height);
         console.log(result);
     }
@@ -142,6 +142,9 @@ function showUser(id) {
     if (id < 0) {
         throw new Error('ID must not be negative: ' + id);
     }
+    else if (isNaN(id)) {
+        throw new TypeError(': id must be a number');
+    }
     return { id: id };
 }
 
@@ -150,7 +153,7 @@ function showUsers(ids) {
     for (let item of ids) {
 
         try {
-          arr.push(showUser(item));
+            arr.push(showUser(item));
         }
 
         catch (error) {
