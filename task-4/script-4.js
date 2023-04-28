@@ -82,7 +82,7 @@ btn10.addEventListener('click', () => {
 const btn11 = document.querySelector(".btn11");
 function calcRectangleArea(width, height) {
 
-    if (width === 0 || height <= 0) {
+    if (width <= 0 || height <= 0) {
         throw new RangeError(":Incorrect input");
     }
     else if (isNaN(width) || isNaN(height)) {
