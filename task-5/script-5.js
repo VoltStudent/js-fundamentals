@@ -38,7 +38,7 @@ console.log(circle1.circleToString());
 
 //2
 function propsCount(currentObject) {
-    return Object.keys(currentObject)
+    return Object.keys(currentObject).length
 }
 let mentor = {
     course: "JS fundamental",
