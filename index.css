@@ -1,4 +1,4 @@
-.marker-text {
+/* .marker-text {
     font-size: 40px;
 }
 
@@ -583,4 +583,8 @@ body{
     .container{
         padding: 20px;
     }
+} */
+
+#new-style {
+  margin-bottom: 20px;
 }
