@@ -83,7 +83,7 @@ const input5 = document.querySelector('#input5');
 const out9 = document.querySelector('#out9');
 
 function checkNewEmail(email) {
-    let regexp = /^[a-zA-Z0-9]+\w*\-?\w*@\w+\.\w+$/;
+    let regexp = /^[a-zA-Z0-9]+\w*\-?\w*@\w+\.\w+$/
     if (regexp.test(email)) {
         out9.innerHTML = "Email is valid";
         out9.style.backgroundColor = 'transparent';
