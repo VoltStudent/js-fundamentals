@@ -46,7 +46,7 @@ new Promise(function (resolve, reject) {
     resolve(number);
   }
 })
-  .catch(function (error) {
+  .catch(function () {
     return new Promise(function (resolve) {
       let number;
       function askNumber() {
@@ -65,4 +65,3 @@ new Promise(function (resolve, reject) {
   });
 
   //4
-  
